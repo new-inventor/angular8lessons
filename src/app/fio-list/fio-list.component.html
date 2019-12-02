@@ -1,0 +1,9 @@
+<div *ngFor="let fio of fioService.listIn | async">
+  <span>{{ fio.lastName }}</span>
+  <span>{{ fio.firstName | firstLetters:2 | dottedPipe}}</span>
+  <span>{{ fio.middleName | firstLetters | dottedPipe}}</span>
+</div>
+{{ testValue }}
+<button (click)="addUser()">Add</button>
+<a routerLink="comment/98765" routerLinkActive="asd">comment</a>
+<router-outlet></router-outlet>
